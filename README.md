@@ -1,5 +1,5 @@
 # potato-ticket
-
+A simple ticket bot.
 ## NOTE
 
 the requiremnets.txt is ONLY FOR WINDOWS!
