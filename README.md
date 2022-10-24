@@ -22,5 +22,7 @@ Next Create a .env file in the directory of the bot. In the .env file put
 TOKEN=your discord bot token
 ```
 
+Once thats done 
+
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)

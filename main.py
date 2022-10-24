@@ -19,9 +19,10 @@ class CreateTicket(nextcord.ui.View):
         msg = await interaction.response.send_message("A ticket is being made for you :wink:", ephemeral=True)
 
         overwrites = {
-            interaction.guild.default_role: nextcord.PermissionOverwrite(read_messages=True, view_channel=True),
+            interaction.guild.default_role: nextcord.PermissionOverwrite(read_messages=False, view_channel=False),
             interaction.guild.me: nextcord.PermissionOverwrite(read_messages=True),
-            interaction.guild.get_role(1034215386960380005): nextcord.PermissionOverwrite(read_messages=True)
+            interaction.user: nextcord.PermissionOverwrite(read_messages = True, view_channel = True),
+            interaction.guild.get_role(1034215386960380005): nextcord.PermissionOverwrite(read_messages=True) # In this line replace the numbers with the id with mod perms (a.k.a manage server perm)
         }
         channel = await interaction.guild.create_text_channel(f"{interaction.user.name}-ticket",
         overwrites=overwrites)
