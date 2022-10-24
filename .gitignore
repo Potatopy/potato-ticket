@@ -1,4 +1,4 @@
 # PyCharm Folder
 .idea
 # Token
-config
+.env
