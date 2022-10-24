@@ -10,7 +10,7 @@ Python 3.10.5 or higher
 nextcord (in requirements.txt)
 .env (in requirements.txt)
 
-## Instrunctions
+## Instructions
 
 To make the bot work first install requirements.txt with this command
 ```bash
