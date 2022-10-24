@@ -22,7 +22,11 @@ Next Create a .env file in the directory of the bot. In the .env file put
 TOKEN=your discord bot token
 ```
 
-Once thats done 
+Once thats done you can now run your bot. Just cd into the bot's directory and run how you normally run a python file.
+
+## Help
+
+If you need help visit my [Discord Server](https://discord.gg/xYwPfU6JWv)
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
