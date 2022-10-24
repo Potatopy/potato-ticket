@@ -1,2 +1,4 @@
 # PyCharm Folder
 .idea
+# Token
+config.json
