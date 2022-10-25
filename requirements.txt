@@ -1,3 +1,0 @@
-py -m pip install nextcord   
-py -m pip install virtualenv
-py -m pip install aiosqlite
