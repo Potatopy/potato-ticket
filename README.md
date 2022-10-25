@@ -9,6 +9,7 @@ the requiremnets.txt is ONLY FOR WINDOWS!
 - Python 3.10.5 or higher
 - nextcord (in requirements.txt)
 - .env (in requirements.txt)
+- aiosqlite (in requirements.txt)
 
 ## Instructions
 
