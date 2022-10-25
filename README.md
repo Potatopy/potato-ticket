@@ -6,9 +6,9 @@ the requiremnets.txt is ONLY FOR WINDOWS!
 
 ## Required
 
-Python 3.10.5 or higher
-nextcord (in requirements.txt)
-.env (in requirements.txt)
+- Python 3.10.5 or higher
+- nextcord (in requirements.txt)
+- .env (in requirements.txt)
 
 ## Instructions
 
