@@ -28,6 +28,11 @@ Once thats done you can now run your bot. Simply Run
 py bot.py
 ```
 
+On Linux
+```bash
+python3 bot.py
+```
+
 And you'll see if it logs in or not.
 ## Help
 
