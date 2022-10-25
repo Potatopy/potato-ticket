@@ -2,3 +2,5 @@
 .idea
 # Token
 .env
+# Database (make your own -_-)
+tickets.db
