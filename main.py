@@ -63,7 +63,7 @@ class RemoveUser(nextcord.ui.Modal):
 
 
 class CreateTicket(nextcord.ui.View):
-    def __init__(self):
+    def __init__(self, bot):
         super().__init__(timeout=None)
         self.bot = bot
 
@@ -140,9 +140,9 @@ class Bot(commands.Bot):
             self.add_view(TicketSettings())
             self.persistent_views_added = True
             print("Persistent views added")
-            self.db = await aiosqlite.connect('tickets.db')
+            self.db = await aiosqlite.connect("tickets.db")
             async with self.db.cursor() as cursor:
-                await cursor.execute(f"CREATE TABLE IF NULL roles (role INTEGER, guild INTEGER)")
+                await cursor.execute(f"CREATE TABLE IF NOT EXISTS roles (role INTEGER, guild INTEGER)")
             print("Database Ready!")
 
             print(f"Logged in as {self.user}")
@@ -160,13 +160,13 @@ async def setup_tickets(ctx: commands.Context):
 @commands.has_permissions(manage_guild=True)
 async def setup_role(ctx: commands.Context, role: nextcord.Role):
     async with bot.db.cursor() as cursor:
-        await cursor.execute("SELECT role FROM role WHERE guild = ?", (ctx.guild.id))
+        await cursor.execute("SELECT role FROM roles WHERE guild = ?", (ctx.guild.id,))
         role2 = await cursor.fetchone()
         if role2:
-            await cursor.execute("UPDATE roles SET role =? WHERE guild = ?", (role.id, ctx.guild.id,))
+            await cursor.execute("UPDATE roles SET role = ? WHERE guild = ?", (role.id, ctx.guild.id,))
             await ctx.send(f"Bot Auto-Assigned role updated!")
         else:
-            await cursor.execute("INSTER INTO roles VALUES (?, ?)", (role.id, ctx.guild.id))
+            await cursor.execute("INSERT INTO roles VALUES (?, ?)", (role.id, ctx.guild.id))
             await ctx.send(f"Bot Auto-Assigned role added!")
     await bot.db.commit()
 
