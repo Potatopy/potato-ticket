@@ -36,8 +36,8 @@ python3 bot.py
 And you'll see if it logs in or not.
 ## Help
 
-- If you have discord.py installed please uninstall it because nextcord is imcompatible with nextcord
-- Another Troubleshooting tip is to update all the packages by running requirement.bat
+- If you have discord.py installed please uninstall it because nextcord is imcompatible with discord.py
+- Another Troubleshooting tip is to update all the packages by re-installing all the packages in requirements.txt
 - If you need additional help visit my [Discord Server](https://discord.gg/xYwPfU6JWv)
 
 ## License
