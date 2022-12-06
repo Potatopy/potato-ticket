@@ -1,4 +1,4 @@
-# Credits zach.#0001
+# Credits domain#0001
 
 import nextcord
 from nextcord.ext import commands
@@ -6,6 +6,7 @@ import os
 import asyncio
 import aiosqlite
 from dotenv import load_dotenv
+
 load_dotenv()
 TOKEN = os.getenv("TOKEN")
 
