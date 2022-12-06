@@ -1,8 +1,5 @@
 # potato-ticket
 A simple ticket bot.
-## NOTE
-
-the requirements.bat is ONLY FOR WINDOWS!
 
 ## Required
 
