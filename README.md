@@ -4,14 +4,17 @@ A simple ticket bot.
 ## Required
 
 - Python 3.10.5 or higher
-- nextcord (in requirements.bat)
-- .env (in requirements.bat)
-- aiosqlite (in requirements.bat)
+- nextcord (in requirements.txt)
+- .env (in requirements.txt)
+- aiosqlite (in requirements.txt)
 - A Discord Bot Token
 
 ## Instructions
 
-To make the bot work first install requirements.bat by simply running it
+To make the bot work first install requirements.txt by simply running 
+```
+pip install -r requirements.txt
+```
 
 Next Create a .env file in the directory of the bot. In the .env file put
 ```.env
